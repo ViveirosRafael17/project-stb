@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Header } from './Components/Header';
+import { MenuPrincipal } from './Components/MenuPrincipal';
+import { Cadastro } from './Components/Cadastro';
+import { CadastroVeterinario } from './Components/Cadastro-Veterinario';
+import { CadastroProdutor } from './Components/Cadastro-Produtor';
+import { Login } from './Components/Login';
+import { Routes, Route } from 'react-router-dom';
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+    <>
+    <Header/>
+    <Routes>
+      <Route path='/' element={<MenuPrincipal/>}></Route>
+      <Route path='/cadastro' element={<Cadastro/>}></Route>
+      <Route path='/cadastro/veterinario' element={<CadastroVeterinario/>}></Route>
+      <Route path='/cadastro/produtor' element={<CadastroProdutor/>}></Route>
+      <Route path='/login' element={<Login/>}></Route>
+    </Routes>
+    </>
+  )
+};

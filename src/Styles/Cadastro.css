@@ -1,0 +1,49 @@
+.singup {
+    height: auto;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.singup-options, .login-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+}
+
+.singup-options {
+    border-bottom: solid 1px gray;
+}
+
+.singup-title {
+    margin: 30px auto;
+}
+
+.singup-item {
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 15px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.singup-item:hover {
+    border: solid 1px blue;
+}
+
+.singup-link {
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.singup-vet, .singup-prod {
+    max-width: 90%;
+    margin: auto;
+}
